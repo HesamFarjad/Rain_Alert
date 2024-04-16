@@ -2,17 +2,14 @@ import requests
 from twilio.rest import Client
 import os
 
-# account_sid = 'ACcc244a4e659864f071e712878cdaf965'
-# auth_token = "b496cd40b7da066117978f8b8f719b0a"
-
 account_sid = os.environ.get("SID")
 auth_token = os.environ.get("AUTH")
 
 end_point = "https://api.openweathermap.org/data/2.5/forecast"
 api_key = "915405c6ad72c496ed3beb2494ecaab8"
 PARAMETERS = {
-    "lat": 57.149715, # Aberdeen Lat - Chose for rain (Rome-lat= 41.902782)
-    "lon": -2.094278, # Aberdeen Lon - Chose for rain (Rome-lat= 12.496365)
+    "lat": 41.902782,
+    "lon": 12.496365,
     "appid": api_key,
     "cnt": 4,
 }
